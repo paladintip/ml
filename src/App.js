@@ -42,7 +42,7 @@ state ={
     }
     this.setState({todos: [...this.state.todos, newTodo]})
     
-      axios.get('http://ec2-54-197-194-170.compute-1.amazonaws.com/')
+      axios.get('http://ml.edparko.com/api/predict?hour=1')
       .then(response => console.log(response))
      
     
