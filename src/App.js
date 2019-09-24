@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
+import PredictForm from './components/PredictForm';
 import Header from './components/layout/Header';
 import About from './components/pages/About'
 import uuid from 'uuid'
@@ -34,17 +35,13 @@ state ={
     })
     
   );
-  addTodo = (title) =>{
-    const newTodo={
-      id: uuid.v4(),
-      title: title,
-      completed: false
-    }
-    this.setState({todos: [...this.state.todos, newTodo]})
+  predict = (hour) =>{
     
-      axios.get('http://ml.edparko.com/api/predict?hour=1')
+    // axios.get(`http://ml.edparko.com/api/ml-predict.php?hour=${hour}`)
+    //   .then(response => this.setState({ chance: response.chance, hour: response.hour }))
+      axios.get(`http://ml.edparko.com/api/ml-predict.php?hour=${hour}`)
       .then(response => console.log(response))
-     
+     console.log(this.state);
     
   }
   render()
@@ -56,7 +53,7 @@ state ={
         <Header/>
         <Route exact path="/" render={props =>(
           <React.Fragment>
-            <AddTodo addTodo = {this.addTodo}/>
+            <PredictForm predict = {this.predict}/>
             <Todos todos={this.state.todos} deleteTodo = {this.deleteTodo} toggleComplete={this.toggleComplete}/>
           </React.Fragment>
           )}/>
