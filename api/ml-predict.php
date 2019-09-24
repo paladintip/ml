@@ -2,10 +2,13 @@
 
 $command = escapeshellcmd('cd /var/www/optimal-work-hours/ &&
 python3 execute-pickle-model.py 4');
-$last_line = system($command, $retval);
 
-var_dump($last_line);
+$last_line = system('cd /var/www/optimal-work-hours/ &&
+python3 execute-pickle-model.py 4', $retval);
+
+
 $data['message'] = $last_line;
+
 
 echo '
 <hr />Last line of the output: ' . $last_line . '
