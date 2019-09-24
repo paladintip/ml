@@ -1,6 +1,7 @@
 <?php
 
-$command = escapeshellcmd('python3 /lib/python/optimal-work-hours/execute-pickle-model.py 4');
+$command = escapeshellcmd('cd /lib/python/optimal-work-hours/ &&
+python3 execute-pickle-model.py 4');
 $data['message'] = shell_exec ( $command );
 
 
