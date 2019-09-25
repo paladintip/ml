@@ -35,7 +35,7 @@ state ={
           <Route path="/about" component={About}/>
           <Route exact path="/" render={props =>(
           <React.Fragment>
-            <h2 class='home-desc'>A little machine learning model for predicting the best time to work.</h2>
+            <h2 class='home-desc'>A little machine learning model for figuring out the best time to do work, I hope . . .</h2>
             <NavLink activeClassName='active' className='startBtn' to="/demo">Try it!</NavLink>
           </React.Fragment>
         )}/>
