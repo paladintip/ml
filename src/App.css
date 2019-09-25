@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web);
-
+/* CSS Reset */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +14,7 @@ a{
   color: #333;
   text-decoration: none;
 }
-
+/* End of Reset */
 
 
 header
@@ -24,21 +24,57 @@ header
   align-items: center;
   padding-top: 40px;
 }
+
+.site-title
+{
+  font-size: 1.6em;
+  padding-bottom: 20px; 
+  font-weight: 100;
+
+}
+
 .app
 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+nav {
+  background: #1f90db;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-left: 10vw;
   
+}
+
+.nav-link {
+  color: white;
+  height: 100%;
+  padding: 10px;
+  transition: background-color 0.2s ease-in;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.219);
 
 }
-.site-title
-{
-  font-size: 1.6em;
 
+.nav-link.active {
+  color: black;
+  background: #fff;
 }
-.text-input
+.home-desc
 {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #333333
+}
+.text-input {
   height: 40px;
   border: 0;
   border-radius: 15px;
@@ -48,118 +84,97 @@ header
   filter: drop-shadow(0 4px 6px rgb(145, 145, 145));
   background-color: white;
   width: 200px;
-
 }
-.btn
-{
+
+.btn {
   border: 0;
   background: linear-gradient(141deg,#1fc8db 0,#1f90db 51%);
   border-radius: 32px;
   min-width: 100px;
-  filter: drop-shadow(0 4px 6px #1f90db);
+  filter: drop-shadow(0 2px 3px #1f90db);
   color: #fff;
   height: 40px;
+  transition: filter 0.2s ease;
 }
-.btn:hover
-{
-
-}
-.about-title
-{
-  padding: 20px;
-}
-.prediction-form
-{
-  padding: 20px;
-}
-
-nav
-{
-  background: #1f90db;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  padding-left: 10vw;
+.btn:hover{
+  
+  
+  filter: drop-shadow(0 4px 6px #1f90db);
   
 }
-.nav-link
-{
-  color: white;
-  height: 100%;
-  padding: 10px;
-  transition: background-color 0.2s ease-in;
+.startBtn {
+  border: 0;
+  background: linear-gradient(141deg,#1fc8db 0,#1f90db 51%);
+  border-radius: 32px;
+  min-width: 200px;
+  filter: drop-shadow(0 2px 3px #1f90db);
+  color: #fff;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  transition: filter 0.2s ease;
+  padding-top: 10px
 }
-.nav-link:hover
-{
-  background: rgba(255, 255, 255, 0.219);
-
-}
-.nav-link.active
-{
-  color: black;
-  background: #fff;
+.startBtn:hover {
   
+  filter: drop-shadow(0 4px 6px #1f90db);
+  
+}
+.about-title {
+  padding: 20px;
+}
 
+.prediction-form {
+  padding: 20px;
 }
-.site-title
-{
-  padding-bottom: 40px;
-}
-.article
-{
+
+.article {
   width: 90vw;
 
 }
-.article > p
-{
+
+.article > p {
   padding-bottom: 10px;
   line-height: 1.5em;
 
 }
-.article > h3
-{
+
+.article > h3 {
   padding: 10px 0;
 }
-.prediction-result-container
-{
+
+.prediction-result-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90vw;
 
 }
-.text-content
-{
+
+.text-content {
   padding: 10px;
   font-size: 18px;
 }
-.result-content
-{
+
+.result-content {
   padding: 20px;
   font-size: 3em;
 }
+
 @media (min-width: 992px) {
-  .article
-  {
-    width: 50vw;
-  
+  .site-title {
+    font-size: 2em;
+
   }
-  nav
-  {
+  nav {
     
     padding-left: 25vw;
     
   }
-  .site-title
-{
-  font-size: 2em;
-
-}
-  .prediction-result-container
-  {
-  
+  .article {
+    width: 50vw;
+  }
+  .prediction-result-container {
     width: 60vw;
-
   }
 }

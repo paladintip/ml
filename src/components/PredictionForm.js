@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class PredictForm extends Component {
+export class PredictionForm extends Component {
     state = {
         hour: ''
     }
@@ -8,7 +8,11 @@ export class PredictForm extends Component {
     change = (e) => this.setState({[e.target.name]: e.target.value})
     submit = (e) => {
         e.preventDefault()
-        this.props.predict(this.state.hour)
+        if(this.state.hour !== '')
+        {
+            this.props.predict(this.state.hour)
+        }
+        
     }
     render() {
         return (
@@ -21,4 +25,4 @@ export class PredictForm extends Component {
     }
 }
 
-export default PredictForm
+export default PredictionForm
