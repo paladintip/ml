@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +7,159 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Titillium Web',Arial, Helvetica, sans-serif;
   line-height: 1.4;
 }
 a{
   color: #333;
   text-decoration: none;
+}
+
+
+
+header
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+.app
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+.site-title
+{
+  font-size: 1.6em;
+
+}
+.text-input
+{
+  height: 40px;
+  border: 0;
+  border-radius: 15px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  padding: 1rem;
+  filter: drop-shadow(0 4px 6px rgb(145, 145, 145));
+  background-color: white;
+  width: 200px;
+
+}
+.btn
+{
+  border: 0;
+  background: linear-gradient(141deg,#1fc8db 0,#1f90db 51%);
+  border-radius: 32px;
+  min-width: 100px;
+  filter: drop-shadow(0 4px 6px #1f90db);
+  color: #fff;
+  height: 40px;
+}
+.btn:hover
+{
+
+}
+.about-title
+{
+  padding: 20px;
+}
+.prediction-form
+{
+  padding: 20px;
+}
+
+nav
+{
+  background: #1f90db;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-left: 10vw;
+  
+}
+.nav-link
+{
+  color: white;
+  height: 100%;
+  padding: 10px;
+  transition: background-color 0.2s ease-in;
+}
+.nav-link:hover
+{
+  background: rgba(255, 255, 255, 0.219);
+
+}
+.nav-link.active
+{
+  color: black;
+  background: #fff;
+  
+
+}
+.site-title
+{
+  padding-bottom: 40px;
+}
+.article
+{
+  width: 90vw;
+
+}
+.article > p
+{
+  padding-bottom: 10px;
+  line-height: 1.5em;
+
+}
+.article > h3
+{
+  padding: 10px 0;
+}
+.prediction-result-container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+
+}
+.text-content
+{
+  padding: 10px;
+  font-size: 18px;
+}
+.result-content
+{
+  padding: 20px;
+  font-size: 3em;
+}
+@media (min-width: 992px) {
+  .article
+  {
+    width: 50vw;
+  
+  }
+  nav
+  {
+    
+    padding-left: 25vw;
+    
+  }
+  .site-title
+{
+  font-size: 2em;
+
+}
+  .prediction-result-container
+  {
+  
+    width: 60vw;
+
+  }
 }

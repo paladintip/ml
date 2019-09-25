@@ -9,14 +9,13 @@ export class PredictForm extends Component {
     submit = (e) => {
         e.preventDefault()
         this.props.predict(this.state.hour)
-        this.setState({hour: ''})
     }
     render() {
         return (
-            <form onSubmit ={this.submit} style={{display: "flex", padding: "5px"}}>
-                <input type="text" name='hour' style={{flex: '10'}} placeholder="Find probability ..." value={this.state.title}
-                onChange={this.change}/>
-                <input type="submit" value="Add" className="btn" style={{flex: '1'}}/>
+            <form onSubmit ={this.submit} className='prediction-form'>
+                <input type="number" min="1" max="24" name='hour' placeholder="Find probability ..." value={this.state.title}
+                onChange={this.change} className='text-input'/>
+                <input type="submit" value="Submit" className="btn"/>
             </form>
         )
     }

@@ -1,15 +1,15 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 function Header(){
     return(
-        <header style={headerStyle}>
-        <h1>TodoList</h1>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link>
+        <header>
+            <h1 className='site-title'>Polynomial Regression</h1>
+            <nav>
+                <NavLink activeClassName='active' className='nav-link' to="/demo">Demo</NavLink>
+                <NavLink activeClassName='active' className='nav-link' to="/about">How its made</NavLink>
+            </nav>
         </header>
     )
 }
-const headerStyle= {
-    textAlign: 'center',
-    padding: '40px 0'
-}
+
 export default Header;
