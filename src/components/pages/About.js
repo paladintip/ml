@@ -4,7 +4,7 @@ function About() {
     return (
        <React.Fragment>
            <h2 className='about-title'>How its made </h2>
-           <div class="article">
+           <div className="article">
             <p>
                 To make the polynomial regression model, I used the Python machine learning library "Sci-kit Learn".&nbsp;
                 The data I used to train the model was gathered from the work timer "Toggl".

@@ -17,9 +17,9 @@ export class PredictionForm extends Component {
     render() {
         return (
             <form onSubmit ={this.submit} className='prediction-form'>
-                <input type="number" min="1" max="24" name='hour' placeholder="Find probability ..." value={this.state.title}
+                <input type="number" min="1" max="24" name='hour' placeholder="Input and hour 1-24" value={this.state.title}
                 onChange={this.change} className='text-input'/>
-                <input type="submit" value="Submit" className="btn"/>
+                <input type="submit" value="Get Probability" className="btn"/>
             </form>
         )
     }

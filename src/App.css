@@ -69,7 +69,7 @@ nav {
 .home-desc
 {
   text-align: center;
-  padding: 20px;
+  padding: 50px;
   font-size: 1.2em;
   font-weight: 100;
   color: #333333
@@ -80,17 +80,17 @@ nav {
   border-radius: 15px;
   margin-right: 20px;
   margin-bottom: 10px;
-  padding: 1rem;
+  padding: 1em;
   filter: drop-shadow(0 4px 6px rgb(145, 145, 145));
   background-color: white;
-  width: 200px;
+  width: 150px;
 }
 
 .btn {
   border: 0;
   background: linear-gradient(141deg,#1fc8db 0,#1f90db 51%);
   border-radius: 32px;
-  min-width: 100px;
+  min-width: 150px;
   filter: drop-shadow(0 2px 3px #1f90db);
   color: #fff;
   height: 40px;
@@ -152,8 +152,9 @@ nav {
 }
 
 .text-content {
-  padding: 10px;
+  padding-top: 40px;
   font-size: 18px;
+  width: 90vw;
 }
 
 .result-content {
@@ -176,5 +177,10 @@ nav {
   }
   .prediction-result-container {
     width: 60vw;
+  }
+  .text-content {
+    padding-top: 40px;
+    font-size: 18px;
+    width: 35vw;
   }
 }

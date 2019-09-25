@@ -15,7 +15,7 @@ state ={
 
   predict = (hour) =>{
     axios.get(`http://ml.edparko.com/api/predict.php?hour=${hour}`)
-      .then(response => this.setState({ probability: response.data, hour: hour }))
+      .then(response => this.setState({ probability: response.data, hour: parseInt(hour) }))
       
   }
   render()
@@ -27,8 +27,9 @@ state ={
         <Header/>
         <Route exact path="/demo" render={props =>(
           <React.Fragment>
-            <PredictionForm predict = {this.predict}/>
             <PredictionResult probability={this.state.probability} hour={this.state.hour}/>
+            <PredictionForm predict = {this.predict}/>
+           
           </React.Fragment>
         )}/>
           <Route path="/about" component={About}/>
